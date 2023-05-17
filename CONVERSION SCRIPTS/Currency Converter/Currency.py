@@ -53,13 +53,13 @@ options = [
 ]
 
 clicked1 = StringVar()
-clicked1.set("Select")
+clicked1.set("请选择币种")
 listbox1 = OptionMenu(frame, clicked1, *options)
 listbox1.config(bg="#fc034e", fg="black", activeforeground="#fc034e",activebackground="black", font=FONT)
 listbox1.place(relx=0.07,rely=0.03,relheight=0.28,relwidth=0.38)
 
 clicked2 = StringVar()
-clicked2.set("Select")
+clicked2.set("请选择币种")
 listbox2 = OptionMenu(frame,clicked2,*options)
 listbox2.config(bg="#fc034e", fg="black", activeforeground="#fc034e",activebackground="black", font=FONT)
 listbox2.place(relx=0.56,rely=0.3,relheight=0.28,relwidth=0.38)
@@ -100,7 +100,7 @@ def convert(c1,c2,amount):
     try:
         if amount == "":
             messagebox.showerror("Error", "Amount not specified")
-        elif c1 == "Select" or c2 == "Select":
+        elif c1 == "请选择币种" or c2 == "请选择币种":
             messagebox.showinfo("Error", "Currency not selected")
         else:
             try:
